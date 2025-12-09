@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: #020617;
+  /* Slate 950 */
+  --foreground: #f1f5f9;
+  /* Slate 100 */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 
+  Spinning Cube Animation 
+  Image: 12 frames, flattened to single horizontal strip.
+  Frame Size: 256px x 229px
+*/
+.cube-spinner {
+  width: 256px;
+  height: 229px;
+  background-image: url('/cube-spin.png');
+  background-repeat: no-repeat;
+  animation: spin-cube 1.5s steps(12) infinite;
+  /* Scaled down for UI fit */
+}
+
+@keyframes spin-cube {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -3072px 0;
+  }
+
+  /* width * 12 frames */
+}
