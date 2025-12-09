@@ -195,7 +195,7 @@ export default function Home() {
       <footer className="w-full border-t border-slate-800 bg-slate-950 py-12 text-center text-slate-500">
         <div className="container mx-auto px-4 flex flex-col items-center gap-6">
           <div>
-            <h3 className="text-lg font-bold text-white">VoxelMask v2.0 (Beta)</h3>
+            <h3 className="text-lg font-bold text-white">VoxelMask v0.3 BETA</h3>
             <p className="mt-1 text-sm text-amber-500/80">Current Status: Functional Release. Validation recommended before clinical production use.</p>
           </div>
 
