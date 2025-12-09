@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Cpu, FileJson, ChevronDown, Terminal, Database, Lock } from "lucide-react";
+import { ShieldCheck, Cpu, FileJson, ChevronDown, Terminal, Database, Lock, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { BuyButton } from "@/components/BuyButton";
 import { ProductOverview } from "@/components/ProductOverview";
 import { SpinningCube } from "@/components/SpinningCube";
@@ -30,6 +31,18 @@ export default function Home() {
 
       {/* Compliance Standards - Now moved here */}
       <ComplianceSection />
+
+      {/* Security Deep-Dive CTA */}
+      <section className="container mx-auto py-8 text-center">
+        <Link
+          href="/security"
+          className="group inline-flex items-center gap-3 px-6 py-3 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 hover:bg-emerald-500/10 hover:border-emerald-500/50 transition-all"
+        >
+          <ShieldCheck className="h-5 w-5" />
+          <span className="font-medium">Dive Deeper: Security & Compliance</span>
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </section>
 
       {/* Key Value Proposition */}
       <section id="features" className="container mx-auto py-16">
@@ -147,28 +160,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Open Source / GitHub CTA */}
+      {/* Enterprise CTA */}
       <section className="container mx-auto py-24 text-center">
         <div className="max-w-4xl mx-auto rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 p-12 shadow-2xl relative overflow-hidden">
           {/* Glow Effect */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50" />
 
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            Open Source & Community Driven
+            From Research to Enterprise
           </h2>
           <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
-            VoxelMask is built for transparency. Audit the code, contribute to the roadmap, or deploy it yourself. Join our community of researchers and developers on GitHub.
+            Whether you're a solo researcher preparing datasets for AI training, a hospital processing FOI requests, or an enterprise needing audit-ready compliance—VoxelMask scales to your workflow.
           </p>
 
-          <a
-            href="https://github.com/HagglesworthMD/VOXELMASK"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-slate-950 px-8 py-4 rounded-full font-bold text-lg hover:bg-cyan-50 transition-all hover:scale-105 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)]"
-          >
-            <GithubIcon className="w-6 h-6" />
-            View on GitHub
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:sales@voxelmask.io"
+              className="inline-flex items-center gap-3 bg-white text-slate-950 px-8 py-4 rounded-full font-bold text-lg hover:bg-cyan-50 transition-all hover:scale-105 hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)]"
+            >
+              Contact Sales
+            </a>
+            <a
+              href="https://github.com/HagglesworthMD/VOXELMASK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 border border-slate-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all"
+            >
+              <GithubIcon className="w-5 h-5" />
+              View Documentation
+            </a>
+          </div>
         </div>
       </section>
 
@@ -177,16 +198,16 @@ export default function Home() {
         <h2 className="mb-12 text-center text-3xl font-bold text-white">Frequently Asked Questions</h2>
         <div className="flex flex-col gap-4">
           <AccordionItem
-            question="Is VoxelMask free to use?"
-            answer="Yes. VoxelMask is currently in Open Beta and the source code is available on GitHub. You are free to use, audit, and modify it for your research needs."
+            question="How is VoxelMask licensed?"
+            answer="VoxelMask offers flexible licensing: a free evaluation tier for testing, per-seat licenses for small teams, and enterprise agreements for hospitals and research institutions requiring BAA support, custom compliance profiles, and dedicated SLAs."
           />
           <AccordionItem
-            question="How do I install run it?"
-            answer="The easiest way is to pull our Docker image. Alternatively, if you are comfortable with Python, you can clone the repo and run it locally. Pre-built binaries for Windows/Mac will be available soon in Releases."
+            question="How do I deploy VoxelMask?"
+            answer="VoxelMask can be deployed via our Docker container for seamless integration into hospital workflows, or installed locally on Windows/Mac/Linux. Our team provides onboarding support for enterprise deployments."
           />
           <AccordionItem
-            question="Can I use this for commercial projects?"
-            answer="While the core engine is open source, if you require a managed enterprise version with SLAs, custom compliance profiles, or BAA support, please contact us for a commercial license."
+            question="Do you offer enterprise support?"
+            answer="Yes. Enterprise licenses include priority support, custom compliance profile development, on-site training, and BAA execution for HIPAA-covered entities. Contact our sales team for a tailored quote."
           />
         </div>
       </section>
