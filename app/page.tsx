@@ -56,7 +56,7 @@ export default function Home() {
           <FeatureCard
             imageSrc="/feature-modality.png"
             title="Modality-Aware Safety"
-            description="Our v2.1 Protocol understands the difference between MRI and Ultrasound. It empowers you to manually mask high-risk modalities with precision while preserving diagnostic quality."
+            description="Our v1.0 Protocol understands the difference between MRI and Ultrasound. It empowers you to manually mask high-risk modalities with precision while preserving diagnostic quality."
           />
         </motion.div>
       </section>
