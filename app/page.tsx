@@ -137,11 +137,12 @@ export default function Home() {
             <TechTag text="Python 3.12" />
             <TechTag text="Pydicom" />
             <TechTag text="NumPy" />
-            <TechTag text="PaddleOCR" />
             <TechTag text="OpenCV" />
             <TechTag text="Streamlit" />
-            <TechTag text="Apple Silicon (M1/M2/M3)" />
-            <TechTag text="CUDA Support" />
+            <TechTag text="HIPAA Safe Harbor" />
+            <TechTag text="DICOM PS3.15" />
+            <TechTag text="OAIC / APP Compliant" />
+            <TechTag text="HMAC-SHA256 Audit" />
           </div>
         </div>
       </section>
