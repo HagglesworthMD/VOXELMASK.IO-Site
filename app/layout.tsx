@@ -6,8 +6,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "VoxelMask - Research Scientist AI Sales Site",
-  description: "De-identify DICOM Medical Images Locally. Privacy-first anonymization for research datasets.",
+  title: "VoxelMask - Securing Medical Data. One Voxel at a Time.",
+  description: "Open-source DICOM de-identification engine. Anonymize medical images locally with HIPAA Safe Harbor compliance, forensic audit trails, and a universal HTML5 viewer.",
 };
 
 import { VoxelBackground } from "@/components/VoxelBackground";
